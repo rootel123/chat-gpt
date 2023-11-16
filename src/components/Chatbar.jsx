@@ -52,10 +52,12 @@ const ChatBar = ({ chatList, setChatList }) => {
   };
 
   return (
-    <div className="h-24">
+    <div className="bg-teal-100 h-24 absolute bottom-0 w-full">
       <form className="h-full flex items-center px-4" onSubmit={onSubmitChat}>
         <input
-          className="grow py-1 px-2 focus:outline-none border-2 focus:border-teal-400 mr-4 rounded-md border-teal-200"
+          className={`grow py-1 px-2 focus:outline-none border-2 focus:border-teal-400 mr-4 rounded-md border-teal-200 ${
+            isLoading && "bg-gray-100 text-gray-500"
+          } `}
           type="text"
           value={newQuestion}
           onChange={(e) => setNewQuestion(e.target.value)}

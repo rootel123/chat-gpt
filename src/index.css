@@ -1,3 +1,45 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.speech-bubble {
+  position: relative;
+  background: rgb(154, 219, 219);
+  border-radius: 0.4em;
+}
+
+.speech-bubble:after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  width: 0;
+  height: 0;
+  border: 9px solid transparent;
+  border-left-color: rgb(154, 219, 219);
+  border-right: 0;
+  border-bottom: 0;
+  margin-top: -4.5px;
+  margin-right: -9px;
+}
+
+.speech-bubble-l {
+  position: relative;
+  background: rgb(183, 183, 243);
+  border-radius: 0.4em;
+}
+
+.speech-bubble-l:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 0;
+  height: 0;
+  border: 9px solid transparent;
+  border-right-color: rgb(183, 183, 243);
+  border-left: 0;
+  border-bottom: 0;
+  margin-top: -4.5px;
+  margin-left: -9px;
+}

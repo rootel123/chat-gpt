@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Chatbar from "./components/Chatbar";
+import ChatSide from "./components/ChatSide";
 import ChatView from "./components/ChatView";
 
 const App = () => {
@@ -7,8 +8,8 @@ const App = () => {
 
   return (
     <div className="min-h-screen max-w-screen-md mx-auto flex">
-      <div className="bg-blue-100 w-52">Side</div>
-      <div className="grow flex flex-col">
+      <ChatSide chatList={chatList} />
+      <div className="grow flex flex-col relative">
         <ChatView chatList={chatList} />
         <Chatbar chatList={chatList} setChatList={setChatList} />
       </div>
