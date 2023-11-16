@@ -26,7 +26,9 @@ const ChatSideCard = ({ question, answer }) => {
             <button onClick={onClickClose} className="self-end mb-4">
               <FiXCircle size={20} />
             </button>
-            <div className="text-lg mb-2 font-semibold">Q. {question}</div>
+            <div className="text-lg mb-2 font-semibold border-b-4 border-gray-400">
+              Q. {question}
+            </div>
             <div className="text-lg font-semibold">A. {answer}</div>
           </div>
         </div>
