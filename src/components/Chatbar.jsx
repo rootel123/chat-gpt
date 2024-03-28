@@ -50,14 +50,14 @@ const ChatBar = ({ chatList, setChatList }) => {
   };
 
   return (
-    <div className="bg-teal-100 h-24 absolute bottom-0 w-full">
+    <div className="bg-zinc-600 h-24 absolute bottom-12 w-full flex justify-center">
       <form
-        className="h-full flex items-center px-4 border-t-2 border-r-2 border-gray-500"
+        className="h-full flex items-center px-4  w-[700px]"
         onSubmit={onSubmitChat}
       >
         <input
-          className={`grow py-1 px-2 focus:outline-none border-2 focus:border-teal-400 mr-4 rounded-md border-teal-200 ${
-            isLoading && "bg-gray-100 text-gray-500"
+          className={`grow py-1 px-2 focus:outline-none border-2 focus:border-gray-400 mr-4 rounded-md border-gray-200 ${
+            isLoading && "bg-gray-400 text-gray-500"
           } `}
           type="text"
           value={newQuestion}
@@ -66,7 +66,7 @@ const ChatBar = ({ chatList, setChatList }) => {
           placeholder="무엇이든 물어보세요."
         />
         <button
-          className="w-28 py-[6px] text-sm bg-cyan-400 active:bg-cyan-600 rounded-lg text-white font-semibold flex justify-center"
+          className="w-28 py-[6px] text-sm bg-gray-500 active:bg-gray-900 rounded-lg text-white font-semibold flex justify-center"
           type="submit"
           disabled={isLoading}
         >

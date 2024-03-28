@@ -15,7 +15,7 @@ const ChatSideCard = ({ question, answer }) => {
   return (
     <>
       <li
-        className="mb-2 truncate cursor-pointer hover:font-bold"
+        className="mb-2 truncate cursor-pointer hover:font-bold text-white"
         onClick={onClickModal}
       >
         {question}
